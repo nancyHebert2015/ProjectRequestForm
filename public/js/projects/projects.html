@@ -1,0 +1,35 @@
+<h3>Projects</h3>
+
+
+<table class="table table-striped">
+  <tr>
+    <th>Project ID</th>
+    <th>Project CI</th>
+    <th>Project Description</th>
+    <th>Project Status</th>
+    <th>Reporting management</th>
+  </tr>
+  <tr class="project" ng-repeat="project in projects">
+    <td>
+      
+       <a href="project/{{project.id}}" class="btn btn-link">{{project.id}}</a>
+     
+ <!--   <a ng-href="dashboard/projects/{{ project.id }}" class="navigate-right" data-transition="slide-in">{{project.id}}</a>-->
+ <!--</td>-->
+    <td>{{project.CI}}</td>
+    <td>{{project.projectDescription}}</td>
+    <td>{{project.status}}
+    
+    <!--<select ng-click="updateProject(project.status)" >-->
+    <!--   <option value="New" name="New">New</option>-->
+    <!--   <option value="Pending" name="Pending">Pending</option>-->
+    <!--   <option value="Started" name="Started">Started</option>-->
+    <!--   <option value="Completed" name="Completed">Completed</option>-->
+    <!--</select>-->
+  
+     </td>
+    <td>{{project.reportingManagement}}</td>
+  </tr>
+</table>
+
+    

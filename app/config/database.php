@@ -26,7 +26,7 @@ return array(
 	|
 	*/
 
-	'default' => 'sqlite',
+	'default' => 'mysql',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -54,10 +54,20 @@ return array(
 
 		'mysql' => array(
 			'driver'    => 'mysql',
-			'host'      => 'localhost',
-			'database'  => 'forge',
-			'username'  => 'forge',
+			'host'      => '127.0.0.1',
+			'database'  => 'uoccc',
+			'username'  => 'nancyhebert',
 			'password'  => '',
+			'charset'   => 'utf8',
+			'collation' => 'utf8_unicode_ci',
+			'prefix'    => '',
+		),
+		'mysqld' => array(
+			'driver'    => 'mysql',
+			'host'      => 'mysql2.electricmousetrap.org',
+			'database'  => 'bsccc',
+			'username'  => 'bsdevteam',
+			'password'  => 'y0uguysr0ck',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',

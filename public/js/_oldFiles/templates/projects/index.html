@@ -1,0 +1,25 @@
+<div id="projects" ng-controller="ProjectIndexController">
+<div class="bar bar-standard bar-header-secondary">
+  <form>
+    <input type="search" class="input" placeholder="Filter projects" ng-model="q" />
+  </form>
+</div>
+
+<p class="table-view">
+		<span class="table-view-cell table-view-divider">{{ filtered.length }} projects<span>
+	</p>
+
+	<ul class="table-view">
+	  <li class="table-view-cell media" ng-repeat="project in filtered = (projects | orderBy:['startDate'] | filter:q)">
+	    <a ng-href="/projects/{{ project.id }}" class="navigate-right" data-transition="slide-in">
+	   
+	     
+	      <div class="media-body">
+	        {{ projects.projectDescription }}
+	       
+	      </div>
+	    </a>
+	  </li>
+	</ul>
+	
+	</div>

@@ -13,23 +13,50 @@ class DatabaseSeeder extends Seeder {
 
 		// $this->call('UserTableSeeder');
 		
-		$this->call('AddProjectsToProjectRequestTable');
+		$this->call('ProjectTableSeeder');
+		$this->call('UserTableSeeder');
 
-        $this->command->info('Projects table seeded!');
-		
+    $this->command->info('table seeded!');
+        
         
 	}
 
 }
 
 
-class AddProjectsToProjectRequestTable extends Seeder {
+class CreateProjectTables extends Seeder {
 
     public function run()
     {
-        DB::table('projects')->delete();
-
-        projects::create(array(	'name' => 'This is my first test projects'));
+        
+    //   DB::table('project')->delete();
+       
+    //   Project::create(array(	
+    //      'status' => 'pending',
+    //      'projectType' => 'webapp',
+    //      'projectDescription' => 'This is my new web app',
+    //      'rationale' => 'This is the rationale content',
+    //      'scope' => 'this is the scope for the project'
+    //      ));
+         
+         
+      DB::table('project')->insert(
+          array('status' => 'pending', 'projectType' => 'webapp', 'projectDescription' => 'This is my new web app', 'scope' => 'this is the scope for the project'));
+      
+        DB::table('users')->insert(
+          array(
+            'username' => 'nhebert@uottawa.ca', 
+            'password' =>  Hash::make('nancy')),
+          array(
+            'username' => 'jcassid2@uottawa.ca', 
+            'password' => Hash::make('electricMousetrap') )
+          
+          );
+          
+          
+      
+              
+          
     }
 
 }

@@ -78,7 +78,7 @@ return array(
 	|
 	*/
 
-	'key' => 'IAHz8I65YNNYwmACoTmNOs6b9F1DUxIi',
+	'key' => 'JiM0dn3MkpO9SHMwXJTM7HwFSjn9u4M3',
 
 	'cipher' => MCRYPT_RIJNDAEL_128,
 
@@ -121,6 +121,8 @@ return array(
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
+		'Dsdevbe\LdapConnector\LdapConnectorServiceProvider',
+		'Way\Generators\GeneratorsServiceProvider',
 
 	),
 
